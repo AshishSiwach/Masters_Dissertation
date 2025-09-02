@@ -1,62 +1,74 @@
-Forecasting UK Battery Electric Vehicle (BEV) Adoption to 2035
-A Time-Series Analysis for a Master's Dissertation
-<p align="center">
-<img src="image_c892b5.png" alt="BEV Forecast" width="800"/>
-</p>
+# ⚡ Forecasting UK Battery Electric Vehicle (BEV) Adoption to 2035  
+*A Time-Series & Machine Learning Analysis for a Master's Dissertation*  
 
-Project Overview
-This repository contains the code and analytical workflow for a Master's dissertation project focused on forecasting the adoption of Battery Electric Vehicles (BEVs) in the United Kingdom through 2035. The study employs a hybrid forecasting model, combining statistical time-series analysis with machine learning, grounded in the CRISP-DM framework.
+---
 
-The key findings indicate that:
+## 📖 Project Overview
+This repository contains the **code, datasets, and analytical workflow** for my MSc Business Analytics dissertation project.  
+The study forecasts **Battery Electric Vehicle (BEV) adoption in the United Kingdom** up to **2035**, combining **statistical time-series models** and **machine learning** within the **CRISP-DM framework**.
 
-A SARIMAX model provides the most statistically accurate short-term forecasts, outperforming Prophet, LightGBM, and a baseline regression model.
+### 🔑 Key Findings
+- ✅ **SARIMAX** model delivers the most statistically accurate **short-term forecasts**, outperforming Prophet, LightGBM, and baseline regression.  
+- 📈 **Google Trends (public interest)** is the most significant **leading indicator** of BEV demand.  
+- ⚡ Charging infrastructure and household income effects **diminish** as the market matures.  
+- 🚦 UK is projected to **miss the 2030 Zero Emission Vehicle (ZEV) mandate** of 80% BEV market share, achieving it in **late 2031** under optimistic scenarios.  
 
-Public interest (measured via Google Trends) is the most significant leading indicator of BEV demand, while the direct impact of charging infrastructure and household income shows diminishing returns in the market's mature phase.
+---
 
-Under current trajectories, the UK is projected to miss its 2030 Zero Emission Vehicle (ZEV) mandate of 80% market share, achieving this milestone in late 2031 even under the most optimistic scenarios.
+## 📂 Project Directory Structure
 
-Project Directory Structure
-The repository is organized into two main folders: Datasets and Code Files. The notebooks for the core analysis are located in Code Files/Analysis and Modelling Code Files and are designed to be run sequentially.
-
+```text
 Masters_Dissertation/
 │
-├── Datasets/
-│   └── (All raw and processed dataset files)
+├── 📁 Datasets/  
+│   └── Raw & processed datasets  
 │
-├── Code Files/
+├── 📁 Code Files/  
 │   │
-│   ├── Analysis and Modelling Code Files/
-│   │   ├── 1_final_merged.ipynb       # Data Consolidation
-│   │   ├── 2_EDA.ipynb                # Initial Exploration & Visualization
-│   │   ├── 3_Feature_selection_Feature_Engg.ipynb # Feature Selection & PCA
-│   │   ├── 4_Data_Engineering.ipynb   # Lag/Rolling Feature Creation
-│   │   ├── 5_EDA_Final.ipynb          # Advanced EDA & Driver Analysis
-│   │   ├── 6_Modelling_Scenario_Analysis_Copy.ipynb # Forecasting Models & Scenarios
-│   │   └── 7_Research_Questions_Analysis.ipynb # Hypothesis Testing (ITS, Granger)
+│   ├── 📁 Analysis and Modelling Code Files/  
+│   │   ├── 1_final_merged.ipynb                Data Consolidation  
+│   │   ├── 2_EDA.ipynb                         Initial Exploration & Visualization  
+│   │   ├── 3_Feature_selection_Feature_Engg.ipynb   Feature Selection & PCA  
+│   │   ├── 4_Data_Engineering.ipynb            Lag & Rolling Feature Creation  
+│   │   ├── 5_EDA_Final.ipynb                   Advanced EDA & Driver Analysis  
+│   │   ├── 6_Modelling_Scenario_Analysis_Copy.ipynb   Forecasting Models & Scenarios  
+│   │   └── 7_Research_Questions_Analysis.ipynb   Hypothesis Testing (ITS, Granger)  
 │   │
-│   └── Independent variables data cleaning code files/
-│       └── (Notebooks for cleaning individual raw datasets)
+│   └── 📁 Independent variables data cleaning code files/  
+│       └── Cleaning scripts for raw datasets  
 │
-└── README.md
+└── 📄 README.md
 
-Methodology
-The project follows a structured five-phase analytical workflow:
+```
+---
 
-Data Collection and Merging: Aggregated monthly data from public sources.
+## ⚙️ Methodology
+The workflow follows a **structured five-phase pipeline**:
 
-Exploratory Analysis & Feature Engineering: Used decomposition, ADF tests, and correlation analysis to understand data properties. Engineered features using PCA, lagging, and rolling statistics.
+1. **Data Collection & Merging** 📊  
+   Aggregated monthly BEV registrations + economic, infrastructure, and behavioral indicators.  
 
-Model Development and Comparison: Performed a rigorous out-of-sample evaluation of four distinct models (Linear Regression, SARIMAX, Prophet, LightGBM) to identify the champion model for short-term forecasting.
+2. **Exploratory Analysis & Feature Engineering** 🔍  
+   - Time-series decomposition, ADF tests, correlations.  
+   - PCA, lag/rolling features to capture temporal dependencies.  
 
-Research Question Analysis: Employed quasi-experimental (ITS) and advanced statistical methods (Granger Causality, LOESS) to quantify the impact of specific drivers.
+3. **Model Development & Comparison** 🤖  
+   - Benchmarked **Linear Regression, SARIMAX, Prophet, LightGBM**.  
+   - Out-of-sample evaluation → **SARIMAX champion model**.  
 
-Hybrid Forecasting and Scenario Analysis:
+4. **Research Question Analysis** 📑  
+   - **Interrupted Time Series (ITS)**, **Granger Causality**, and **LOESS smoothing**.  
 
-Short-Term (2024-2027): Used the champion SARIMAX model to forecast registrations under baseline and economic stress scenarios.
+5. **Hybrid Forecasting & Scenario Analysis** 🔮  
+   - **Short-Term (2024–2027):** SARIMAX baseline + economic stress.  
+   - **Long-Term (to 2035):** Logistic Growth (S-curve) with four strategic adoption paths.  
 
-Long-Term (to 2035): Used a Logistic Growth (S-curve) model to forecast market share under four strategic scenarios.
+![Workflow Diagram](assets/methodology_workflow.png) <!-- Example workflow graphic -->
 
-How to Run the Code
+---
+
+
+## 🚀 How to Run the Code
 To replicate the analysis, follow these steps:
 
 1. Clone the repository:
@@ -74,20 +86,20 @@ source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
 
 pip install pandas numpy matplotlib seaborn statsmodels pmdarima prophet lightgbm scikit-learn jupyter
 
-4. Run the notebooks:
-Execute the Jupyter notebooks in the Code Files/Analysis and Modelling Code Files/ directory in their numbered order to ensure dependencies from data creation and feature engineering are met.
+---
 
-Data Sources
-This study uses exclusively public, anonymized, and aggregated data from the following authoritative sources.
+📚 Data Sources
 
-BEV Registrations: UK Department for Transport (DfT), table VEH1153.
+All data is public, aggregated, and anonymized, from authoritative sources:
 
-Economic Indicators: Office for National statistics (ONS) for Real Household Disposable Income (RHDI) and Consumer Price Index (CPI).
+🚗 BEV Registrations: UK Department for Transport (DfT), Table VEH1153.
 
-Fuel Prices: Department for Energy Security and Net Zero (DESNZ).
+📉 Economic Indicators: ONS (Real Household Disposable Income, CPI).
 
-Public Interest: Google Trends for search terms related to "electric car".
+⛽ Fuel Prices: Department for Energy Security and Net Zero (DESNZ).
 
-Charging Infrastructure: DfT statistical releases on public charging points.
+🌐 Public Interest: Google Trends ("electric car").
 
-Policy Data: Historical Plug-in Car Grant (PiCG) values compiled from government announcements.
+⚡ Charging Infrastructure: DfT statistical releases.
+
+🏛 Policy Data: Historical Plug-in Car Grant (PiCG) values from UK Government announcements.
