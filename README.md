@@ -42,6 +42,7 @@ Masters_Dissertation/
 └── 📄 README.md
 
 ```
+
 ---
 
 ## ⚙️ Methodology
@@ -105,3 +106,5 @@ All data is public, aggregated, and anonymized, from authoritative sources:
 ⚡ Charging Infrastructure: DfT statistical releases.
 
 🏛 Policy Data: Historical Plug-in Car Grant (PiCG) values from UK Government announcements.
+
+*Note: To deploy the Dash Python dashboard on Render, a separate repository (https://github.com/AshishSiwach/EV_Adoption_Dashboard.git) was created.*
