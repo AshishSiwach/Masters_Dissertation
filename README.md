@@ -13,10 +13,13 @@ The study forecasts **Battery Electric Vehicle (BEV) adoption in the United King
 - ⚡ Charging infrastructure and household income effects **diminish** as the market matures.  
 - 🚦 UK is projected to **miss the 2030 Zero Emission Vehicle (ZEV) mandate** of 80% BEV market share, achieving it in **late 2031** under optimistic scenarios.  
 
+   *An accompanying interactive Dash dashboard translates these findings into decision-ready visuals for executives (interactive dashboard: https://ev-adoption-analysis-dashboard.onrender.com/)*.
 ---
 
 ## 📂 Project Directory Structure
+*All the code files are run in the particular order as shown below for the best results.*
 
+*Modelling_Scenario_RQ_Analysis.ipynb file contains all the modelling, scenario analysis and research question analysis.*
 ```text
 Masters_Dissertation/
 │
@@ -27,12 +30,11 @@ Masters_Dissertation/
 │   │
 │   ├── 📁 Analysis and Modelling Code Files/  
 │   │   ├── 1_final_merged.ipynb                Data Consolidation  
-│   │   ├── 2_EDA.ipynb                         Initial Exploration & Visualization  
+│   │   ├── 2_EDA.ipynb                         Initial Exploration & Visualisation  
 │   │   ├── 3_Feature_selection_Feature_Engg.ipynb   Feature Selection & PCA  
 │   │   ├── 4_Data_Engineering.ipynb            Lag & Rolling Feature Creation  
 │   │   ├── 5_EDA_Final.ipynb                   Advanced EDA & Driver Analysis  
-│   │   ├── 6_Modelling_Scenario_Analysis_Copy.ipynb   Forecasting Models & Scenarios  
-│   │   └── 7_Research_Questions_Analysis.ipynb   Hypothesis Testing (ITS, Granger)  
+│   │   ├── 6_Modelling_Scenario_RQ_Analysis.ipynb   Forecasting Models & Scenarios and Hypothesis Testing (ITS, Granger)    
 │   │
 │   └── 📁 Independent variables data cleaning code files/  
 │       └── Cleaning scripts for raw datasets  
