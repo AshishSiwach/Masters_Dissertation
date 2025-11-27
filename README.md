@@ -1,6 +1,9 @@
 # ⚡ Forecasting UK Battery Electric Vehicle (BEV) Adoption to 2035  
 *A Time-Series & Machine Learning Analysis for a Master's Dissertation*  
 
+<img width="2752" height="1536" alt="unnamed (2)" src="https://github.com/user-attachments/assets/e2fb0405-f62c-4961-bc6e-d0c474d69791" />
+
+
 ---
 
 ## 📖 Project Overview
